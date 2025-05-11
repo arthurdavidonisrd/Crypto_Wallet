@@ -1,2 +1,8 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1><%= Date.today %></h1>
+
+<% name = "Arthur" %>
+<% age = 19 %>
+
+<p>Hy, my name is <%= name %> and i'am <%= age %> years old</p>
+
+<%= link_to 'See all Coins', coins_path %>
