@@ -1,3 +1,6 @@
+<%= render "menu" %>
+
+<h1>Seu ambiente é: <%= rails_environment %> </h1>
 <h1><%= main_app_title %> - <%= set_date_ptbr(Date.today) %></h1>
 
 <% name = "Arthur" %>
@@ -5,4 +8,7 @@
 
 <p>Hy, my name is <%= name %> and i'am <%= age %> years old</p>
 
-<%= link_to 'See all Coins', coins_path %>
+<p>
+  Vindo da variavel de instancia / sessao <%= @name %> - <%= @course %>
+</p>
+

@@ -6,4 +6,12 @@ module ApplicationHelper
   def main_app_title
     "Crypto Wallet"
   end
+
+  def rails_environment
+    if Rails.env.development?
+     "desenvolvimento"
+    else
+     "producao"
+    end
+  end
 end
