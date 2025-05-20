@@ -28,7 +28,7 @@
 
  <div>
     <%= form.label :mining_type_id, "Tipo de mineração", style: "display: block" %>
-    <%= form.collection_select :mining_type_id, MiningType.all, :id, :description, { include_blank: true } %>
+    <%= form.collection_select :mining_type_id, @mining_type_options, :id, :description, { include_blank: true } %>
   </div>
 
 

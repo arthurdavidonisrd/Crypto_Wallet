@@ -1,6 +1,8 @@
 class CoinsController < ApplicationController
   layout "adm"
   before_action :set_coin, only: %i[ show edit update destroy ]
+  before_action :set_mining_type_options, only: [ :new, :edit, :update, :create ]
+
   def index
     @coins = Coin.all
   end
@@ -25,14 +27,10 @@ class CoinsController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @coin.update(coin_params)
-        format.html { redirect_to @coin, notice: "Coin was successfully updated." }
-        format.json { render :show, status: :ok, location: @coin }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @coin.errors, status: :unprocessable_entity }
-      end
+    if @coin.update(coin_params)
+      redirect_to @coin, notice: "Coin was successfully updated."
+    else
+      render :edit, status: :unprocessable_entity
     end
   end
 
@@ -42,6 +40,11 @@ class CoinsController < ApplicationController
   end
 
   private
+
+    def set_mining_type_options
+      @mining_type_options = MiningType.all
+    end
+
     def set_coin
       @coin = Coin.find(params.expect(:id))
     end
