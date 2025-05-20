@@ -26,6 +26,12 @@
     <%= form.text_field :url_image %>
   </div>
 
+ <div>
+    <%= form.label :mining_type_id, "Tipo de mineração", style: "display: block" %>
+    <%= form.collection_select :mining_type_id, MiningType.all, :id, :description, { include_blank: true } %>
+  </div>
+
+
   <div>
     <%= form.submit %>
   </div>
