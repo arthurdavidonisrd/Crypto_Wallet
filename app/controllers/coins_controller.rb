@@ -47,6 +47,6 @@ class CoinsController < ApplicationController
     end
 
     def coin_params
-      params.expect(coin: [ :description, :acronym, :url_image ])
+      params.expect(coin: [ :description, :acronym, :url_image, :mining_type_id ])
     end
 end
