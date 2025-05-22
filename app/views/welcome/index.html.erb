@@ -1,14 +1,5 @@
 <%= render "menu" %>
 
 <h1>Seu ambiente é: <%= rails_environment %> </h1>
+<p>Seu sistema esta em: <%= I18n.locale %></p>
 <h1><%= main_app_title %> - <%= set_date_ptbr(Date.today) %></h1>
-
-<% name = "Arthur" %>
-<% age = 19 %>
-
-<p>Hy, my name is <%= name %> and i'am <%= age %> years old</p>
-
-<p>
-  Vindo da variavel de instancia / sessao <%= @name_session %> - <%= @course_session %>
-</p>
-
