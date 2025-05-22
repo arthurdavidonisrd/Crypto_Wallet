@@ -1,4 +1,6 @@
 
-
 en:
   hello: "Hello world"
+
+pt-BR:
+  abc: "Ola mundo!"

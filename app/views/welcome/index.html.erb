@@ -1,5 +1,6 @@
 <%= render "menu" %>
 
 <h1>Seu ambiente é: <%= rails_environment %> </h1>
-<p>Seu sistema esta em: <%= I18n.locale %></p>
+<p>Seu sistema esta em: <%= locale_lang(I18n.locale) %></p>
 <h1><%= main_app_title %> - <%= set_date_ptbr(Date.today) %></h1>
+<p><%= I18n.t('abc') %></p>
