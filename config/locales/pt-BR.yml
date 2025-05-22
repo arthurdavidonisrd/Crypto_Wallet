@@ -1,3 +1,10 @@
 
 pt-BR:
   ola: "Ola mundo!"
+  links:
+    edit: "Edtiar"
+    show: "Mostrar"
+    delete: "Apagar"
+    new: "Criar moeda"
+    show_specific_coin: "Ver essa moeda"
+    show_all_coins: "Ver todas moedas"

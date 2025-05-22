@@ -1,6 +1,7 @@
 
 en:
   hello: "Hello world"
-
-pt-BR:
-  abc: "Ola mundo!"
+  links:
+    edit: "Edit"
+    show: "Show"
+    delete: "Delete"
